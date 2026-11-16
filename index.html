@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Bryan first-trip itinerary for Guatemala, late June 2027: Safe Passage visit, volcano hike, and Lake Atitlán.">
+<title>Guatemala, late June 2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe6;--bg2:#ebe4d6;--paper:#fffdf8;--ink:#1c1914;--muted:#5b554c;--line:#d9d0c0;--forest:#1e4a38;--forest2:#2b6a50;--clay:#9a4a2a;--warn:#f8efe2;--info:#e8f0ec;--shadow:0 1px 2px rgba(28,25,20,.06),0 8px 24px rgba(28,25,20,.06);--nav:3.5rem;--max:44rem;--wide:68rem}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav) + .75rem)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Source Sans 3","Segoe UI",sans-serif;font-size:1.0625rem;line-height:1.6}
+a{color:var(--forest)}
+a:hover{color:var(--forest2)}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;letter-spacing:-.02em}
+h1{font-size:clamp(2rem,6vw,3.25rem);line-height:1.12;margin:0 0 .6rem}
+h2{font-size:clamp(1.45rem,3vw,1.85rem);line-height:1.2;margin:0 0 .75rem}
+h3{font-size:1.15rem;margin:0 0 .5rem}
+p{margin:0 0 1rem}
+p:last-child{margin-bottom:0}
+.nav{position:sticky;top:0;z-index:40;height:var(--nav);display:flex;align-items:center;justify-content:space-between;gap:.75rem;padding:0 1rem;background:rgba(244,239,230,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{font-family:Fraunces,Georgia,serif;font-weight:600;text-decoration:none;color:var(--ink);white-space:nowrap}
+.nav-toggle{display:none;border:1px solid var(--line);background:var(--paper);border-radius:.5rem;padding:.35rem .6rem;font:inherit;font-size:.9rem;color:var(--ink)}
+.nav-links{display:flex;flex-wrap:wrap;gap:.15rem .9rem;justify-content:flex-end}
+.nav-links a{text-decoration:none;color:var(--muted);font-size:.82rem;font-weight:600}
+.nav-links a:hover,.nav-links a:focus{color:var(--ink)}
+.hero{background:linear-gradient(180deg,rgba(30,74,56,.08),transparent 40%),var(--bg2);border-bottom:1px solid var(--line);padding:2.5rem 1.25rem 3rem}
+.wrap,.wide,.hero-inner{width:min(var(--max),calc(100% - 2rem));margin-inline:auto}
+.wide{width:min(var(--wide),calc(100% - 2rem))}
+.kicker{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--clay);margin-bottom:.6rem}
+.lede{font-size:1.12rem;color:var(--muted);max-width:40rem}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin-top:1.75rem}
+.metric{background:var(--paper);border:1px solid var(--line);border-radius:.85rem;padding:.9rem 1rem;box-shadow:var(--shadow)}
+.metric strong{display:block;font-family:Fraunces,Georgia,serif;font-size:1.2rem}
+.metric span{display:block;color:var(--muted);font-size:.88rem}
+section.block{padding:2.5rem 0 0}
+section.block:last-of-type{padding-bottom:3rem}
+.caption{color:var(--muted);font-size:.92rem;margin:-.25rem 0 1rem}
+.callout,.card,.stay,.day,.letter,details.panel{background:var(--paper);border:1px solid var(--line);border-radius:.9rem;box-shadow:var(--shadow)}
+.callout{padding:1rem 1.1rem;margin:0 0 1.15rem}
+.callout.warn{background:var(--warn);border-color:#ead3b3}
+.callout.info{background:var(--info);border-color:#c9ddd3}
+.callout strong{display:block;margin-bottom:.25rem}
+.grid-2,.stays,.days{display:grid;gap:.85rem}.stays{grid-template-columns:repeat(3,minmax(0,1fr))}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.stay,.card{padding:1rem 1.05rem}
+.price{font-weight:600;color:var(--forest);margin:.5rem 0}
+.muted{color:var(--muted)}
+.small{font-size:.92rem}
+.table-wrap{overflow-x:auto;margin:0 0 1rem}
+table{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:.9rem;overflow:hidden;box-shadow:var(--shadow);font-size:.95rem}
+th,td{text-align:left;padding:.7rem .8rem;vertical-align:top;border-bottom:1px solid var(--line)}
+th{background:var(--bg2);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+tr:last-child td{border-bottom:0}
+.seg{display:inline-flex;background:var(--bg2);border:1px solid var(--line);border-radius:999px;padding:.2rem;margin:0 0 1rem}
+.seg button{border:0;background:transparent;font:inherit;font-weight:600;font-size:.92rem;padding:.4rem .9rem;border-radius:999px;color:var(--muted);cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--paper);color:var(--ink);box-shadow:var(--shadow)}
+.day{padding:1rem 1.05rem;display:grid;gap:.15rem}
+.day-top{display:flex;justify-content:space-between;gap:.75rem;align-items:baseline}
+.day time{font-weight:700;color:var(--clay);font-size:.82rem;letter-spacing:.04em;text-transform:uppercase}
+.place{font-size:.82rem;font-weight:600;color:var(--forest)}
+.day.anchor{border-color:#b9d2c6;background:#f4faf7}
+ul,ol{margin:0 0 1rem;padding-left:1.2rem}
+li{margin:.3rem 0}
+dl{margin:0 0 1rem}
+dt{font-weight:700;margin-top:.7rem}
+dd{margin:.15rem 0 0;color:var(--muted)}
+details.panel{padding:.85rem 1.05rem;margin:0 0 1rem}
+details.panel summary{cursor:pointer;font-weight:700}
+.check{list-style:none;padding:0;margin:0}
+.check li{display:flex;gap:.7rem;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:.75rem;padding:.7rem .85rem;margin:0 0 .45rem}
+.check input{margin-top:.3rem;accent-color:var(--forest);width:1.1rem;height:1.1rem;flex:none}
+.check label{cursor:pointer}
+.check li.done label{text-decoration:line-through;color:var(--muted)}
+.progress{color:var(--muted);font-size:.9rem;margin-bottom:.7rem}
+.letter{padding:1rem 1.1rem;white-space:pre-wrap;font-size:.98rem}
+.btn{display:inline-block;border:1px solid var(--forest);background:var(--forest);color:#fff;text-decoration:none;font-weight:600;font-size:.92rem;padding:.5rem .9rem;border-radius:999px;cursor:pointer;margin:.4rem .4rem 0 0}
+.btn.ghost{background:transparent;color:var(--forest)}
+.btn:hover{background:var(--forest2);color:#fff}
+footer{margin-top:3rem;padding:1.5rem 1.25rem 2.5rem;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem;text-align:center}
+.sources{columns:2;column-gap:1.5rem;font-size:.92rem}
+.sources li{break-inside:avoid}
+@media(max-width:800px){
+.metrics,.grid-2,.stays{grid-template-columns:1fr}
+.sources{columns:1}
+.nav-toggle{display:inline-flex}
+.nav-links{display:none;position:absolute;top:var(--nav);left:0;right:0;background:var(--paper);border-bottom:1px solid var(--line);padding:.75rem 1rem 1rem;flex-direction:column;gap:.55rem;max-height:calc(100dvh - var(--nav));overflow:auto}
+.nav.open .nav-links{display:flex}
+.nav-links a{font-size:1rem;padding:.2rem 0}
+}
+</style>
+</head>
+<body>
+<header class="nav" id="nav">
+<a class="brand" href="#top">Guatemala 2027</a>
+<button class="nav-toggle" type="button" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
+<nav class="nav-links" id="navLinks" aria-label="Sections">
+<a href="#glance">Overview</a>
+<a href="#flights">Flights</a>
+<a href="#safe-passage">Safe Passage</a>
+<a href="#itinerary">Itinerary</a>
+<a href="#volcano">Volcano</a>
+<a href="#swim">Swimming</a>
+<a href="#stay">Stay</a>
+<a href="#getting-around">Getting around</a>
+<a href="#costs">Costs</a>
+<a href="#entry">Entry</a>
+<a href="#safety">Safety</a>
+<a href="#health">Health</a>
+<a href="#packing">Packing</a>
+<a href="#sources">Sources</a>
+</nav>
+</header>
+<header class="hero" id="top">
+<div class="hero-inner">
+<p class="kicker">Bryan’s first trip</p>
+<h1>Guatemala, late June 2027</h1>
+<p class="lede">A visit and tour at Safe Passage in Guatemala City on Wednesday, June 30, a volcano hike from Antigua, and swimming at Lake Atitlán, then home Thursday, July 1. The day-by-day works whether you land Tuesday, June 22 or Wednesday, June 23. Flight fares are being priced separately.</p>
+<div class="metrics">
+<div class="metric"><strong>Jun 22 or 23</strong><span>Arrive Guatemala City (GUA)</span></div>
+<div class="metric"><strong>Jun 30</strong><span>Safe Passage visit day</span></div>
+<div class="metric"><strong>Jul 1</strong><span>Fly home from GUA</span></div>
+</div>
+</div>
+</header>
+<main>
+<section class="block" id="glance">
+<div class="wrap">
+<h2>At a glance</h2>
+<p>The recommended route is short and realistic for a first visit: Antigua for the volcano, Lake Atitlán for swimming and scenery, then Guatemala City for Safe Passage. Semuc Champey is spectacular, but the shuttle is about 10 hours each way, so it is an alternate, not an add-on.</p>
+<p>A $1,000 donation is generous, and Safe Passage does not publish a visit fee or a minimum donation. Ask them how they prefer to receive the gift rather than bringing a large amount of cash to campus.</p>
+<div class="callout warn">
+<strong>If you will be under 18, plan a chaperone.</strong>
+Safe Passage recommends that visitors be 14 or older and that minors be accompanied by a chaperone. Confirm this when you email them. They also share safety and confidentiality guidelines before the visit; follow those while you are on campus.
+</div>
+</div>
+</section>
+<section class="block" id="flights">
+<div class="wrap">
+<h2>Flights</h2>
+<div class="callout info">
+<strong>Fares are being priced separately.</strong>
+This page does not include ticket prices. A separate search is pricing American and United, which you prefer so you can take one carry-on plus a personal item. Plan to fly into and out of La Aurora International Airport (GUA) in Guatemala City.
+</div>
+<p>Target window: depart the U.S. so you arrive Tuesday, June 22 or Wednesday, June 23, 2027, and return Thursday, July 1 from GUA. Tuesday, June 22 is the better arrival if you can get it, because it gives you a full day in Antigua to acclimate before a hard volcano hike. If you land on June 23, the itinerary still works, but the Acatenango overnight should shift a day later, or you can do the easier Pacaya day hike instead.</p>
+<p>Most itineraries from the Chicago area connect in a U.S. hub and arrive at GUA in the afternoon or evening. Once fares are in, the day-by-day can be locked to the actual arrival time. Leave generous connection time, and do not book a same-day onward shuttle that leaves before you clear immigration.</p>
+</div>
+</section>
+<section class="block" id="safe-passage">
+<div class="wrap">
+<h2>Safe Passage</h2>
+<p class="caption">Camino Seguro, Guatemala City. Facts below are from safepassage.org, read November 16, 2026.</p>
+<p>Safe Passage, also called Camino Seguro, is an education organization working with youth and families in Guatemala City. The visit is the trip&apos;s fixed point: be back near the capital by Tuesday, June 29, and keep Wednesday, June 30 clear. The plan is a scheduled visit and tour, plus a donation of about $1,000.</p>
+<dl>
+<dt>Visitor days</dt><dd>Last Wednesday of each month. They say they will do their best to accommodate other dates.</dd>
+<dt>Your target date</dt><dd>Wednesday, June 30, 2027</dd>
+<dt>Hours</dt><dd>Visits and Support Teams: 9 a.m. to 3 p.m., Monday through Friday, January through October. Students are not in session October 26 through January 15.</dd>
+<dt>How to sign up</dt><dd>Email <a href="mailto:infoguate@safepassage.org">infoguate@safepassage.org</a> and schedule in advance. There is no public online booking form.</dd>
+<dt>Visit fee</dt><dd>No visit fee or minimum donation is listed on the visit or donate pages. A planned gift of about $1,000 is separate from admission.</dd>
+<dt>Age</dt><dd>Visitors: 14 or older, with a chaperone for minors. Support Team trips: 16 or older, with chaperones for younger participants.</dd>
+<dt>Visitor guidelines</dt><dd>Cultural sensitivity, respect, and privacy are essential. Follow the safety and confidentiality guidelines they share before the visit.</dd>
+<dt>Campus notes</dt><dd>The visit page describes a guided experience at the campus in Zone 3. The published Guatemala office address is 6a. Avenida 11-95, Zona 7, Colonia Landívar. Follow their arrival instructions; do not go looking for the campus on your own.</dd>
+<dt>Guatemala contact</dt><dd><a href="mailto:infoguate@safepassage.org">infoguate@safepassage.org</a>, <a href="tel:+50224404388">+502 2440-4388</a> (phone or WhatsApp). Office hours in Guatemala: Monday-Thursday 8 a.m.-3 p.m., Friday 8 a.m.-1 p.m.</dd>
+<dt>U.S. contact and donations</dt><dd><a href="mailto:info@safepassage.org">info@safepassage.org</a>, <a href="tel:+12078461188">(207) 846-1188</a>. Donate at <a href="https://www.safepassage.org/donate/">safepassage.org/donate</a>. EIN 01-0532835. Mailing address: PO Box 192, New Gloucester, ME 04260.</dd>
+</dl>
+<p>Support Team group trips are a different program, coordinated with Old Town Outfitters, and are not what you need for a one-day visit. A 2024 Safe Passage post said they had paused Support Teams for a time because of crime near their sites and would no longer accept youth teams for a week of service, while short visits and tours with advance planning could continue. Confirm the current visitor process when you email.</p>
+<a class="btn" href="https://www.safepassage.org/visit/">Visit page</a>
+<a class="btn ghost" href="https://www.safepassage.org/contact/">Contact</a>
+<h3 style="margin-top:1.6rem">Email draft</h3>
+<p>Send this to <a href="mailto:infoguate@safepassage.org">infoguate@safepassage.org</a>, and copy <a href="mailto:info@safepassage.org">info@safepassage.org</a> if you like. Adjust the age line if you will already be 18 by the visit. Ask them how they prefer to receive a donation, rather than bringing a large amount of cash to campus.</p>
+<p><strong>Subject:</strong> Visit request for Wednesday, June 30, 2027, and a donation</p>
+<pre class="letter" id="emailDraft">Hello Safe Passage team,
+
+My name is Bryan Wnek. I help run circulation for The Windmill Weekly, a local newspaper in the United States (thewindmillweekly.com), and I am planning my first trip to Guatemala.
+
+I would like to schedule a campus visit and tour on Wednesday, June 30, 2027, the last Wednesday of the month. If that date is full, I can try to be flexible on another weekday between Monday, June 28 and Wednesday, June 30, while I am in Guatemala City.
+
+I would also like to make a donation of about $1,000 to support your programs. Please let me know the best way to give, and whether you would like that arranged before I arrive.
+
+I am a high school student heading to college and may be traveling on my own. If I will still be under 18 on the visit date, I understand a chaperone is recommended. Please tell me what you need from me to approve the visit, including arrival instructions, since I do not want to make my own way into the neighborhood.
+
+Thank you for the work you do, and for considering the visit.
+
+Bryan Wnek
+The Windmill Weekly
+thewindmillweekly.com</pre>
+<button class="btn ghost" type="button" id="copyEmail">Copy email draft</button>
+</div>
+</section>
+<section class="block" id="itinerary">
+<div class="wrap">
+<h2>Day by day</h2>
+<p class="caption">Switch the arrival date. Both plans keep June 29-30 in Guatemala City and fly home July 1.</p>
+<div class="seg" role="group" aria-label="Arrival date">
+<button type="button" id="btn22" aria-pressed="true">Land Jun 22</button>
+<button type="button" id="btn23" aria-pressed="false">Land Jun 23</button>
+</div>
+<p id="planNote"></p>
+<div class="days" id="days"></div>
+</div>
+</section>
+<section class="block" id="volcano">
+<div class="wrap">
+<h2>Volcano hikes</h2>
+<p>For a first trip, the Acatenango overnight is the more memorable hike: you sleep on the mountain and, if the clouds break, watch Volcán Fuego erupt at night. It is also much harder, colder, and more exposed to June rain. Pacaya is the realistic backup: a half-day walk from Antigua, lower, and officially rated easier.</p>
+<div class="grid-2">
+<article class="card">
+<h3>Acatenango overnight</h3>
+<p>The classic overnight, with a sunrise summit at 3,976 meters and views of active Fuego if weather allows.</p>
+<p>Reputable operators publish clear inclusions. OX: $119 plus a Q100 park fee, difficult, 6:30 a.m. start, cabins already on the mountain. Old Town Outfitters: $148-$253 depending on group size, park fees included, intermediate, 8:00 a.m. start; they are also Safe Passage&apos;s Support Team travel partner. Tropicana: from $90, park fee and 4 liters of water included, warm clothes provided.</p>
+<p>OX leaves earlier than many companies specifically to reach camp before typical afternoon rain in the May-October wet season, which matters in June.</p>
+</article>
+<article class="card">
+<h3>Pacaya day hike</h3>
+<p>Shorter and easier: Adrenalina&apos;s collective tour is $20 plus entrance, about 6 hours, with 6 a.m. and 2 p.m. departures from Antigua. The official Pacaya site lists foreigner entry at Q100 in 2026 and rates difficulty 4/10, with about 1 to 1.5 hours of ascent.</p>
+<p>You still visit an active volcano and can walk lava fields, but you do not get the overnight Fuego show or the 3,976-meter sunrise.</p>
+<p>Pacaya is in Escuintla department, which CDC lists among malaria-transmission departments. Discuss this at a travel clinic. The official park site says the best season is November to April, so June can be cloudy.</p>
+</article>
+</div>
+<p style="margin-top:1rem">The U.S. State Department says not to hike trails or volcanoes without a qualified local guide. Book a named operator; do not go independently. In June, pack a rain jacket, warm layers, and boots with grip. OX warns campsite temperatures can reach about -2 C (28 F) and the summit about -5 C (23 F). Tropicana lists nighttime temperatures of 2-5 C. Start booking only after flights are set, and tell the operator you are a first-time visitor traveling solo.</p>
+<ul>
+<li><a href="https://adventureguatemala.com/tour/acatenango-volcano-overnight-hike">Old Town Outfitters Acatenango overnight</a></li>
+<li><a href="https://oxexpeditions.com/tours/acatenango-overnight-hike/">OX Expeditions Acatenango overnight</a></li>
+<li><a href="https://tropicanahostel.com/product/acatenango-hike/">Tropicana Acatenango overnight</a></li>
+<li><a href="https://adrenalinatours.com/product/pacaya-volcano-collective/">Adrenalina Pacaya collective</a></li>
+<li><a href="https://www.volcandepacaya.com.gt/">Official Pacaya park information, 2026 prices</a></li>
+</ul>
+</div>
+</section>
+<section class="block" id="swim">
+<div class="wrap">
+<h2>Swimming and nature</h2>
+<p>Lake Atitlán is the swimming and scenery base that fits this short trip. The lake sits under volcanoes, villages are linked by public boats, and you can swim, kayak, or jump from a platform without adding a 10-hour transfer.</p>
+<ul>
+<li><a href="https://www.sicultura.gob.gt/directory-directorio_c/listing/cerro-tzankujil/">Reserva Natural Cerro Tzankujil</a>, San Marcos La Laguna. Guatemala&apos;s cultural-information listing says it is open daily 8 a.m. to 5 p.m., with swimming areas, trails, viewpoints, and a platform about 20 meters above the lake. It does not publish an entrance fee on that page, so confirm the current price on arrival.</li>
+<li>Hotel swimming access. La Casa del Mundo, in Jaibalito, is boat-access only and has lakeside swimming terraces; its FAQ says guests and staff swim there regularly and calls that part of the lake one of the cleaner stretches. La Iguana Perdida in Santa Cruz La Laguna is also on the water, with kayaking and diving as part of the usual guest scene.</li>
+<li>Kayaks and village boats. Casa del Mundo recommends kayaking in the morning because afternoon wind and waves are harder for beginners, and lists public boats at about Q25, running roughly every 20 minutes between the hotel, Panajachel, and San Pedro, with last-boat times that can change. Always confirm the last return.</li>
+<li>San Juan La Laguna. A short boat ride from San Pedro, known for textile cooperatives and lakeshore views.</li>
+</ul>
+<p>CDC advises avoiding swimming in fresh, unchlorinated water in Guatemala because of leptospirosis, and says not to swallow the water. That includes lakes and rivers. If you do swim, use a designated area, skip it after heavy rain or if you have open cuts, and talk it through at a travel clinic.</p>
+<details class="panel">
+<summary>Semuc Champey alternate</summary>
+<p style="margin-top:.75rem">Semuc Champey&apos;s limestone pools are one of the most beautiful swimming spots in the country, but they do not fit cleanly beside both a volcano overnight and two nights at the lake. Adrenalina&apos;s Antigua-to-Lanquín shuttle is $50, leaves at 8:00 a.m., and is listed at 10 hours. The operator is blunt that these buses can be old, cramped, and delayed, and that the road is rough. A realistic Semuc add would replace the lake: shuttle on the morning after you return from the volcano, one full day at the pools, and a 10-hour ride back the next morning, arriving in time to reach Guatemala City on June 29.</p>
+<p>A CONAP tariff sheet hosted on the agency site (uploaded November 2021) lists foreigner entry at Q50. Confirm the current fee before you go. Semuc is in Alta Verapaz, a department where CDC recommends malaria chemoprophylaxis. After heavy rain the pools and the last stretch of road can be more hazardous; ask locally the morning of the visit.</p>
+<p><a href="https://adrenalinatours.com/product/shuttle-antigua-to-lanquin/">Antigua to Lanquín shuttle</a></p>
+</details>
+</div>
+</section>
+<section class="block" id="stay">
+<div class="wide">
+<h2>Where to stay</h2>
+<p class="caption">Official property pages, checked November 16, 2026. June 2027 rates were not bookable as a live total. Figures below are the prices those sites published, or a note that you should request a quote. Confirm age rules directly if you may be under 18.</p>
+<h3>Guatemala City, June 29-July 1</h3>
+<p>Stay in Zone 10 (Zona Viva) or Zone 9, near Avenida La Reforma. These are the usual visitor bases, with hotels, restaurants, and easier access to official taxis and Uber. The State Department says to consider hotels with professional security staff, and not to stay in or visit Zone 18 or Villa Nueva.</p>
+<div class="stays">
+<article class="stay"><h3>Clarion Hotel &amp; Suites</h3><p class="small muted">Zone 10, Zona Viva. All-suites hotel, restaurant, optional airport taxi (extra). A straightforward, secure-feeling base for the Safe Passage night.</p><p class="price">No public nightly rate. Request a quote for Jun 29-Jul 1, 2027.</p><a href="https://en.clarionguatemala.com/">clarionguatemala.com</a></article>
+<article class="stay"><h3>Hotel San Carlos</h3><p class="small muted">Zone 10 on Avenida La Reforma. Boutique hotel with restaurant, pool, and gym. Central and easy for Uber or hotel taxis.</p><p class="price">No public nightly rate. Call (502) 2247-3000 or email reservaciones@hsancarlos.com.</p><a href="https://www.hsancarlos.com/">hsancarlos.com</a></article>
+<article class="stay"><h3>Hilton Garden Inn Guatemala City</h3><p class="small muted">Zone 9, off Reforma, about 4 km from the airport. Restaurant and free parking. Official policy: children 18 and under stay free, with existing bedding, when sharing with a paying adult - useful if a parent comes as a chaperone.</p><p class="price">No 2027 rate was shown without dates. Request a quote on the Hilton page.</p><a href="https://www.hilton.com/en/hotels/guagcgi-hilton-garden-inn-guatemala-city/">Hilton Garden Inn page</a></article>
+</div>
+<h3 style="margin-top:1.6rem">Antigua, arrival through the volcano</h3>
+<div class="stays">
+<article class="stay"><h3>Hotel Aurora</h3><p class="small muted">Historic bed-and-breakfast a few blocks from Central Park. Quiet courtyard, breakfast included, and a guest note on the hotel&apos;s own site that staff held luggage during an Acatenango hike. A safe, walkable, slightly more comfortable pick than a party hostel.</p><p class="price">Published from $100 single, $105 double, $120 triple, $130 quadruple, $185 suite, per night. Confirm for June 2027.</p><a href="https://www.hotelauroraantigua.com/">hotelauroraantigua.com</a></article>
+<article class="stay"><h3>Hotel La Sin Ventura</h3><p class="small muted">Central, small hotel on 5a Avenida Sur, 24-hour desk, positioned as clean, safe, and mid-budget. Good if you want a hotel rather than a hostel.</p><p class="price">No public nightly rate on the site. Call +502 7832-0581 or +502 5918-2466 and ask.</p><a href="https://lasinventura.com/">lasinventura.com</a></article>
+<article class="stay"><h3>Yellow House</h3><p class="small muted">Central B&amp;B and hostel-style stay with breakfast. Cozy and well located. Some third-party booking pages list an 18+ check-in age; the official site does not state a policy, so email them if you may be under 18.</p><p class="price">No public nightly rate on the official site.</p><a href="https://www.yellowhouseantigua.com/">yellowhouseantigua.com</a></article>
+</div>
+<h3 style="margin-top:1.6rem">Lake Atitlán</h3>
+<div class="stays">
+<article class="stay"><h3>La Iguana Perdida, Santa Cruz La Laguna</h3><p class="small muted">Lakeside, boat access from Panajachel. Dorms and private rooms, a social but established backpacker base, and easy water access for swimming and kayaking.</p><p class="price">Dorms from $14 a night. Private rooms and cabins from $50 to $85. Suites from $75 to $85.</p><a href="https://laiguanaperdida.com/rooms/">laiguanaperdida.com/rooms</a></article>
+<article class="stay"><h3>La Casa del Mundo, Jaibalito</h3><p class="small muted">Boat-access cliff hotel with swimming terraces, kayaks, and a quieter setting. Cash, Venmo, Zelle, or bank transfer; no credit cards. Public lancha from Muelle Tzanjuyú, about Q25.</p><p class="price">Rates are shown only in the site&apos;s Reservations calendar. Check dates there rather than using a guessed number.</p><a href="https://lacasadelmundo.com/">lacasadelmundo.com</a></article>
+<article class="stay"><h3>San Pedro or San Marcos village stay</h3><p class="small muted">If you want to be next to Cerro Tzankujil, base in San Marcos La Laguna. If you want more restaurants and boat frequency, use San Pedro. Compare current listings closer to the trip; a third official property with a published 2027 rate was not locked in.</p><p class="price">Request current rates. Adrenalina&apos;s shuttle from Antigua drops at the San Pedro dock for $25.</p><a href="https://adrenalinatours.com/collective-shuttle-services-antigua-2/">Antigua shuttle list</a></article>
+</div>
+<h3 style="margin-top:1.6rem">Lanquín, only if you choose the Semuc alternate</h3>
+<div class="stays">
+<article class="stay"><h3>El Retiro Lodge</h3><p class="small muted">Riverside lodge-hostel in Lanquín, with dorms, private rooms, a pool, and tours to Semuc. Social, with paths and stairs, so better for active guests.</p><p class="price">Dorms from Q120, semi-private from Q260, private from Q375, deluxe from Q550.</p><a href="https://www.elretirolodgelanquin.com/">elretirolodgelanquin.com</a></article>
+<article class="stay"><h3>Hostal El Portal de Semuc Champey</h3><p class="small muted">The closest well-known base to the pools, at the end of the road to the park. Useful if you want to walk rather than jeep in.</p><p class="price">The official site takes reservations but does not list a public rate. Email or call through the reservations page.</p><a href="https://champeysemuc.wixsite.com/el-portal-de-champey/home">El Portal site</a></article>
+<article class="stay"><h3>Zephyr Lodge, for contrast only</h3><p class="small muted">Popular Lanquín hostel, but Hostelworld lists an 18+ age rule. Skip this one if you may be under 18, and confirm any hostel&apos;s age policy before paying.</p><p class="price">Use Hostelworld or the lodge directly for current rates; a working official homepage was not found on November 16, 2026.</p><a href="https://www.hostelworld.com/hostels/p/315193/zephyr-lodge/">Hostelworld listing</a></article>
+</div>
+</div>
+</section>
+<section class="block" id="getting-around">
+<div class="wrap">
+<h2>Getting around</h2>
+<p>Use tourist shuttles, vetted private transfers, Uber in Guatemala City, or official taxis. The State Department tells travelers to use services such as Taxis Amarillo Express, Taxi Seguro, or Uber; to use INGUAT-approved taxis from the airport SAFE stand, hotel taxis, or vetted private drivers; and to avoid public transport, white taxis, and chicken buses.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Route</th><th>Typical time and published fare</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>GUA or Guatemala City to Antigua</td><td>Adrenalina: $15, about 2 hours 15 minutes, several daily departures, 48-hour prepaid booking. Guatemala Transportation lists $18. Private cars cost more; ask Atitrans or your hotel for a quote rather than guessing.</td><td>Adrenalina and Guatemala Transportation</td></tr>
+<tr><td>Antigua to Panajachel</td><td>Atitrans shared shuttle $20, about 3 hours, daily at 5:30 a.m., 8:00 a.m., 12:30 p.m., and 4:00 p.m., hotel pickup. Adrenalina: $25, 3 hours, 8:00 a.m., 12:30 p.m., 4:00 p.m.</td><td>Atitrans and Adrenalina</td></tr>
+<tr><td>Antigua to San Pedro La Laguna</td><td>Adrenalina: $25, about 4 hours, 8:30 a.m. and 2:00 p.m., drop-off at the San Pedro dock, not door to door.</td><td>Adrenalina</td></tr>
+<tr><td>Lake boats</td><td>Casa del Mundo: public lanchas about Q25, roughly every 20 minutes in daylight, with last-boat times that can change. Agree on the price before boarding. Afternoon wind can make crossings rougher.</td><td>La Casa del Mundo FAQ</td></tr>
+<tr><td>Antigua to Lanquín (Semuc)</td><td>Adrenalina: $50, 8:00 a.m., listed at 10 hours, drop at the bus station near Hotel El Recreo. The operator warns of old buses, tight seats, and delays. Consider a private transfer if you take this route.</td><td>Adrenalina</td></tr>
+<tr><td>Safe Passage visit</td><td>Do not navigate Zone 3 on your own. Ask the organization to arrange or specify a driver. Hiring a taxi from a Zone 10 hotel, or using a driver they trust, is the point.</td><td>Safe Passage visit and contact pages</td></tr>
+</tbody>
+</table></div>
+<p>Book shuttles at least 48 hours ahead when the operator requires it. Travel in daylight as much as possible. Keep your bag on you in vans, and do not leave a phone visible at a window or on a city sidewalk.</p>
+</div>
+</section>
+<section class="block" id="costs">
+<div class="wrap">
+<h2>Costs</h2>
+<p class="caption">These are building blocks from dated public prices, not a guaranteed trip total. They exclude flights, the $1,000 donation, travel insurance, and souvenirs.</p>
+<p>A September 25, 2026 budget compiled from same-day menu, hostel, and shuttle prices (updated October 23, 2026) added up three sample days in Antigua, before transport and tickets: about $34 for a dorm and simple meals, about $52 for a shared private room and sit-down meals, and about $101 for a shared whole-place stay and a restaurant dinner. The quetzal conversion used that day was Banco de Guatemala&apos;s reference rate of Q7.63682 per $1.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>Item</th><th>Published figure</th><th>When and where</th></tr></thead>
+<tbody>
+<tr><td>Simple travel day, Antigua</td><td>About $34 to $52 a day before tours and long shuttles</td><td>livinginguatemala.com sample days, prices read September 24, 2026</td></tr>
+<tr><td>Hotel Aurora, Antigua</td><td>$100 to $185 a night, breakfast included</td><td>Official site, November 16, 2026</td></tr>
+<tr><td>La Iguana Perdida</td><td>Dorm from $14; privates from $50 to $85</td><td>Official rooms page, November 16, 2026</td></tr>
+<tr><td>El Retiro, Lanquín</td><td>Dorm from Q120; private from Q375</td><td>Official site, November 16, 2026</td></tr>
+<tr><td>Acatenango overnight</td><td>From $90 (Tropicana, park fee included) to $119 + Q100 (OX) to $148-$253 (Old Town, fees included). Optional porter: $75 at Old Town, Q200 each way at OX.</td><td>Operator pages and OX information sheet</td></tr>
+<tr><td>Pacaya day hike</td><td>$20 collective tour plus Q100 foreigner entry</td><td>Adrenalina and official Pacaya site, 2026 prices</td></tr>
+<tr><td>Main shuttles</td><td>City or airport to Antigua $15; Antigua to Panajachel $20-$25; Antigua to San Pedro $25; Antigua to Lanquín $50</td><td>Adrenalina and Atitrans, read November 16, 2026</td></tr>
+<tr><td>Safe Passage donation</td><td>About $1,000, as planned. Not required for a visit on any published page.</td><td>Your plan; safepassage.org/donate</td></tr>
+</tbody>
+</table></div>
+<p>A cautious on-the-ground envelope, not including flights or the donation, is roughly $50 to $80 a day if you mix mid-budget hotels with local meals, plus $90 to $250 for the volcano, plus $60 to $120 in shared shuttles, plus park and boat fees. Hotel Aurora nights will push the daily figure higher. Get fresh quotes once 2027 reservations open.</p>
+</div>
+</section>
+<section class="block" id="entry">
+<div class="wrap">
+<h2>Entry requirements</h2>
+<p>For U.S. citizens, the usual tourist rules are: a valid U.S. passport, no tourist visa, and a stay of up to 90 days. The U.S. Embassy in Guatemala says U.S. citizens are not required to have a visa and are authorized entry for a 90-day tourist period. Older State Department country information, still widely cited, says the passport must be valid at the time of entry and that a visa is not required. Some airlines, and the U.K. government&apos;s advice, talk about six months of validity. Check your passport expiration and your airline&apos;s rule well before June, and allow a blank page for the entry stamp.</p>
+<p>Guatemala requires an electronic Regional Traveler&apos;s Affidavit (Declaración Jurada Regional de Viajero) for people entering or leaving by air or sea. SAT says it can be completed up to 15 days ahead and expires on the travel date you enter. Keep the QR code from the confirmation email, on your phone and as a screenshot or printout. Complete it for the way in and again for the way out: <a href="https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/">SAT traveler declaration</a>.</p>
+<p>Guatemala&apos;s immigration institute also lists a return ticket, a hotel reservation or host details, and, if asked, proof of funds. Carry those even if you are not asked every time. If you are under 18 and flying alone, ask American or United about unaccompanied-minor rules; those are airline policies, not a substitute for Safe Passage&apos;s chaperone guidance. Confirm with the airline and, if needed, the Embassy of Guatemala that no extra parental letter is required for your exact situation.</p>
+</div>
+</section>
+<section class="block" id="safety">
+<div class="wrap">
+<h2>Safety</h2>
+<p>As of the March 12, 2026 Travel Advisory, the State Department rates Guatemala Level 3: Reconsider Travel, because of crime and terrorism. That is the official U.S. government advice, and you should read the full page before you book. If you go, enroll in STEP, buy travel insurance that includes medical evacuation, and use a short list of hard rules.</p>
+<ul>
+<li>Do not travel to Zone 18 in Guatemala City, the city of Villa Nueva, San Marcos Department, or Huehuetenango Department. Those are Level 4, Do Not Travel, areas on the same advisory.</li>
+<li>San Marcos La Laguna on Lake Atitlán is not the same place as San Marcos Department. The lakeside village is in Sololá Department and is a normal visitor stop. The department of San Marcos is a different, restricted region in the west of the country.</li>
+<li>In Guatemala City, stay in Zone 10 or 9, use Uber or a hotel taxi, and do not walk between zones after dark. Avoid showing a phone, jewelry, or a large amount of cash. The State Department also says to avoid public ATMs.</li>
+<li>Safe Passage operates in a part of the city that the organization itself has described as higher risk. Go only with their plan for the day, and leave when the visit is over.</li>
+<li>Do not hike without a qualified guide. Robberies can happen on trails, and help can be far away.</li>
+<li>U.S. Embassy in Guatemala: Boulevard Austriaco 11-51, Zone 16, Guatemala City, <a href="tel:+50223540000">+502 2354-0000</a>. From the U.S., the State Department citizen emergency line is <a href="tel:+18884074747">1-888-407-4747</a>. <a href="https://step.state.gov/">Enroll in STEP</a>.</li>
+</ul>
+</div>
+</section>
+<section class="block" id="health">
+<div class="wrap">
+<h2>Health</h2>
+<p>See a travel clinic at least a month before departure, as CDC recommends. The <a href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/guatemala/">Guatemala traveler page</a>, last reviewed September 3, 2026, is the checklist to take to that appointment.</p>
+<ul>
+<li>Vaccines CDC lists for most travelers include being up to date on routine shots (especially MMR), hepatitis A, and typhoid. Hepatitis B is recommended for unvaccinated travelers younger than 60. COVID-19 vaccination should be up to date. Chikungunya vaccination is generally not recommended, but mosquito bite prevention still matters because dengue and other mosquito-borne illnesses circulate.</li>
+<li>Malaria: CDC says there is no malaria transmission in Antigua, Guatemala City, or at Lake Atitlán. Chemoprophylaxis is recommended for travel in Alta Verapaz, Baja Verapaz, Escuintla, Izabal, and Petén. That matters if you go to Semuc Champey (Alta Verapaz) or hike Pacaya (Escuintla). Acatenango from Antigua is not in those lake-and-city exceptions by name, so ask the clinician how they treat a Pacaya or Semuc add-on.</li>
+<li>Tap water is not potable, even in the capital, according to CDC Yellow Book. Drink bottled or treated water, and be careful with ice, raw produce, and unpasteurized dairy. Typhoid vaccine is not 100% effective, so the same food and water habits still apply.</li>
+<li>CDC warns about leptospirosis in fresh water and advises against swimming in lakes, ponds, or rivers. That is a real caution for Atitlán and Semuc, not a ban, and it should be part of the clinic visit.</li>
+<li>Rabies is present in dogs and bats. Pre-exposure vaccine is a case-by-case decision for people who may not reach prompt care after an animal bite.</li>
+</ul>
+</div>
+</section>
+<section class="block" id="packing">
+<div class="wrap">
+<h2>Rainy season and packing</h2>
+<p>June is in Guatemala&apos;s rainy season, generally May through October. Operators describe a common pattern of clearer mornings, clouds building by midday, and rain in the afternoon, then clearer spells later. That is why volcano views are less reliable than in the November-April dry season, why OX starts Acatenango early, why lake swimming and kayaking belong in the morning, and why Semuc can be wetter and the access road muddier. A rain day is not a spoiled trip if the schedule has slack, which this one does.</p>
+<p class="progress" id="packProgress"></p>
+<ul class="check" id="packingList"></ul>
+<h3 style="margin-top:1.6rem">Before you go</h3>
+<p class="caption">Checks you make here stay on this phone or computer until you clear them. They are not shared anywhere else.</p>
+<p class="progress" id="prepProgress"></p>
+<ul class="check" id="prepList"></ul>
+</div>
+</section>
+<section class="block" id="sources">
+<div class="wrap">
+<h2>Sources</h2>
+<p class="caption">Facts and prices were read on November 16, 2026, except where a source is dated earlier. They can change.</p>
+<ol class="sources">
+<li><a href="https://www.safepassage.org/visit/">Safe Passage visit page</a></li>
+<li><a href="https://www.safepassage.org/contact/">Safe Passage contact page</a></li>
+<li><a href="https://www.safepassage.org/donate/">Safe Passage donate page</a></li>
+<li><a href="https://www.safepassage.org/support-teams-change/">Change in Support Team program</a></li>
+<li><a href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/guatemala-travel-advisory.html">U.S. State Department, Guatemala Travel Advisory</a></li>
+<li><a href="https://gt.usembassy.gov/">U.S. Embassy in Guatemala</a></li>
+<li><a href="https://gt.usembassy.gov/services/guatemalan-residence-requirements/">U.S. citizens, no visa, 90-day tourist entry</a></li>
+<li><a href="https://portal.sat.gob.gt/portal/declaracion-jurada-regional-de-viajero/">SAT Regional Traveler Affidavit</a></li>
+<li><a href="http://igm.gob.gt/requisitos-de-ingreso-a-territorio-guatemalteco/">Guatemala immigration entry requirements</a></li>
+<li><a href="https://step.state.gov/">STEP enrollment</a></li>
+<li><a href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/guatemala/">CDC Guatemala traveler view</a></li>
+<li><a href="https://www.cdc.gov/yellow-book/hcp/americas-caribbean/guatemala-and-belize.html">CDC Yellow Book, Guatemala and Belize</a></li>
+<li><a href="https://adventureguatemala.com/tour/acatenango-volcano-overnight-hike">Old Town Outfitters, Acatenango overnight</a></li>
+<li><a href="https://oxexpeditions.com/tours/acatenango-overnight-hike/">OX Expeditions, Acatenango overnight</a></li>
+<li><a href="https://tropicanahostel.com/product/acatenango-hike/">Tropicana, Acatenango overnight</a></li>
+<li><a href="https://adrenalinatours.com/product/pacaya-volcano-collective/">Adrenalina, Pacaya collective</a></li>
+<li><a href="https://www.volcandepacaya.com.gt/">Official Pacaya park site, 2026 prices</a></li>
+<li><a href="https://www.atitrans.net/shuttle/antigua/panajachel-agp/">Atitrans, Antigua to Panajachel shuttle</a></li>
+<li><a href="https://adrenalinatours.com/collective-shuttle-services-antigua-2/">Adrenalina, collective shuttles from Antigua</a></li>
+<li><a href="https://adrenalinatours.com/product/shuttle-antigua-to-lanquin/">Adrenalina, Antigua to Lanquín shuttle</a></li>
+<li><a href="https://en.clarionguatemala.com/">Clarion Hotel and Suites, Zone 10</a></li>
+<li><a href="https://www.hsancarlos.com/">Hotel San Carlos, Zone 10</a></li>
+<li><a href="https://www.hilton.com/en/hotels/guagcgi-hilton-garden-inn-guatemala-city/">Hilton Garden Inn Guatemala City, Zone 9</a></li>
+<li><a href="https://www.hotelauroraantigua.com/">Hotel Aurora, Antigua</a></li>
+<li><a href="https://lasinventura.com/">Hotel La Sin Ventura, Antigua</a></li>
+<li><a href="https://www.yellowhouseantigua.com/">Yellow House, Antigua</a></li>
+<li><a href="https://laiguanaperdida.com/rooms/">La Iguana Perdida rooms</a></li>
+<li><a href="https://lacasadelmundo.com/">La Casa del Mundo</a></li>
+<li><a href="https://www.elretirolodgelanquin.com/">El Retiro Lodge, Lanquín</a></li>
+<li><a href="https://champeysemuc.wixsite.com/el-portal-de-champey/home">Hostal El Portal de Semuc Champey</a></li>
+<li><a href="https://www.sicultura.gob.gt/directory-directorio_c/listing/cerro-tzankujil/">Cerro Tzankujil, official cultural listing</a></li>
+<li><a href="https://conap.gob.gt/wp-content/uploads/2021/11/Tarifario-Semuc-Champey.pdf">CONAP Semuc Champey tariff sheet, 2021 upload</a></li>
+<li><a href="https://livinginguatemala.com/guides/guatemala-travel-budget-per-day/">Dated 2026 daily budget compilation</a></li>
+</ol>
+</div>
+</section>
+</main>
+<footer>
+<p>Prepared for Bryan on November 16, 2026. Prices, visit rules, and travel advice can change; confirm with the official pages and with Safe Passage before you book.</p>
+</footer>
+<script>
+(function () {
+  var nav = document.getElementById("nav");
+  var toggle = document.getElementById("navToggle");
+  var links = document.getElementById("navLinks");
+  toggle.addEventListener("click", function () {
+    var open = nav.classList.toggle("open");
+    toggle.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  links.addEventListener("click", function (e) {
+    if (e.target.tagName === "A") {
+      nav.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+    }
+  });
+  var note22 = "This is the stronger plan. You get a full day in Antigua before the overnight hike, which Old Town Outfitters and OX Expeditions both treat as a hard, high-altitude walk. OX specifically recommends at least 48 hours in Antigua, about 1,500 meters, before going up.";
+  var note23 = "If you land June 23, do not try to hike Acatenango the next morning. You will not have time to acclimate, and you may miss the required pre-trip meeting. Shift the overnight hike to June 25-26, or choose the easier Pacaya day hike on June 24 and keep more time at the lake.";
+  var plan22 = [
+    ["Tue Jun 22", "Arrive GUA, transfer to Antigua", "Antigua", "Clear immigration, pick up bags, and take an official airport taxi, Uber, or a pre-booked shuttle to Antigua (Adrenalina lists about 2 hours 15 minutes and $15; Guatemala Transportation lists $18). Check in, walk the central grid, drink water, and sleep early. Do not plan a long activity today."],
+    ["Wed Jun 23", "Easy Antigua day and hike briefing", "Antigua", "Stay in the historic center: plazas, churches, and cafes. If you book OX, attend the 5 p.m. pre-trip meeting the day before the hike. Pack rain and cold layers, and eat a normal dinner. Avoid a heavy night out; altitude and a 6:30 a.m. start do not mix."],
+    ["Thu Jun 24", "Acatenango overnight begins", "Volcano", "OX departs at 6:30 a.m.; Old Town Outfitters at 8:00 a.m. You hike several hours to camp, then watch Volcán Fuego from the campsite. Nights can drop below freezing. This is the hard adventure of the trip."],
+    ["Fri Jun 25", "Summit at sunrise, back to Antigua", "Antigua", "Early summit, then a long descent. OX aims to be back around noon and says not to book an onward shuttle before 2 p.m. Shower, eat, and rest. Do not travel to the lake this afternoon."],
+    ["Sat Jun 26", "Shuttle to Lake Atitlán", "Atitlán", "Morning shuttle from Antigua to Panajachel (Atitrans: $20, about 3 hours, departures include 8:00 a.m.) or to San Pedro (Adrenalina: $25, about 4 hours). If you stay at La Iguana Perdida or La Casa del Mundo, ride a public lancha from Muelle Tzanjuyú in Panajachel, about Q25 according to Casa del Mundo. Settle in and swim only if there is still calm water and daylight."],
+    ["Sun Jun 27", "Full lake day", "Atitlán", "Do water time in the morning, before the afternoon Xocomil wind. Swim or cliff-jump only at a designated spot such as Reserva Natural Cerro Tzankujil in San Marcos La Laguna (open 8 a.m. to 5 p.m.). Kayak in the morning. Boat to San Juan or San Pedro for markets and lakeshore views. Do not leave a last boat too late; public lanchas have afternoon and evening cutoffs that can vary."],
+    ["Mon Jun 28", "Second morning on the lake", "Atitlán", "Another swim or kayak at first light, or a short guided walk. Keep the afternoon light. Stay a second night at the lake so you are not rushing into Guatemala City after a long boat-and-shuttle day."],
+    ["Tue Jun 29", "Travel to Guatemala City", "Guatemala City", "Take a morning boat to Panajachel if needed, then a shuttle to Zone 9 or 10 in Guatemala City. Check in, confirm tomorrow’s Safe Passage plan, and stay in for the evening. This is not a sightseeing day in the capital."],
+    ["Wed Jun 30", "Safe Passage visit", "Guatemala City", "Keep the day clear from 9 a.m. to 3 p.m. Use the transport they recommend. Follow the confidentiality and visitor guidelines they share. Afterward, stay in Zone 10 or the 4 Grados Norte area of Zone 4 for dinner, then return to the hotel by booked car or Uber.", true],
+    ["Thu Jul 1", "Fly home from GUA", "GUA", "Complete the electronic traveler declaration for departure as well as arrival. Leave extra time for traffic and airport formalities. Use Uber, a hotel taxi, or a pre-booked shuttle, not a random airport tout."]
+  ];
+  var plan23 = [
+    ["Wed Jun 23", "Arrive GUA, transfer to Antigua", "Antigua", "Same airport plan as the June 22 arrival: official taxi, Uber, or pre-booked shuttle to Antigua. If you land late, go straight to the hotel and eat nearby. Message your hike operator if you cannot attend a 5 p.m. briefing."],
+    ["Thu Jun 24", "Acclimate in Antigua, or hike Pacaya", "Antigua", "Rest and walk the center. Optional: a Pacaya day hike (Adrenalina collective, $20 plus park entry, about 6 hours, 6 a.m. or 2 p.m. departures). Pacaya is much easier than Acatenango. If you still want the overnight Fuego views, use today as your OX or Old Town briefing day for a June 25 start."],
+    ["Fri Jun 25", "Acatenango overnight, if that is your hike", "Volcano or lake", "Same overnight plan as the other itinerary. If you already did Pacaya yesterday and want a lighter trip, skip this and take a morning shuttle to the lake instead, which gives you an extra night at Atitlán."],
+    ["Sat Jun 26", "Return to Antigua, or travel to the lake", "Antigua", "If you hiked overnight, you should be back around midday. Rest, then stay in Antigua tonight. Do not attempt a same-day transfer all the way to a boat-access hotel on the lake."],
+    ["Sun Jun 27", "Shuttle to Lake Atitlán", "Atitlán", "Morning shuttle to Panajachel or San Pedro, then a lancha if your hotel is water-access only. You get one full afternoon and one full morning at the lake in this version, so protect the mornings for swimming."],
+    ["Mon Jun 28", "Full lake morning, second night at the lake", "Atitlán", "Cerro Tzankujil, kayaking, and village boats. Keep the afternoon flexible for rain. Overnight at the lake so Tuesday is only a travel day."],
+    ["Tue Jun 29", "Travel to Guatemala City", "Guatemala City", "Morning boats and a shuttle to Zone 9 or 10. Confirm the Safe Passage pickup or meeting point. Quiet evening at the hotel."],
+    ["Wed Jun 30", "Safe Passage visit", "Guatemala City", "The visit date does not change. Keep 9 a.m. to 3 p.m. free and use only transport they approve.", true],
+    ["Thu Jul 1", "Fly home from GUA", "GUA", "Exit declaration, official taxi or Uber, and a long buffer before departure."]
+  ];
+  function renderDays(plan) {
+    var root = document.getElementById("days");
+    root.replaceChildren();
+    plan.forEach(function (d) {
+      var art = document.createElement("article");
+      art.className = "day" + (d[4] ? " anchor" : "");
+      var top = document.createElement("div");
+      top.className = "day-top";
+      var t = document.createElement("time");
+      t.textContent = d[0];
+      var place = document.createElement("span");
+      place.className = "place";
+      place.textContent = d[2];
+      top.append(t, place);
+      var h = document.createElement("h3");
+      h.textContent = d[1];
+      var p = document.createElement("p");
+      p.textContent = d[3];
+      art.append(top, h, p);
+      root.appendChild(art);
+    });
+  }
+  var btn22 = document.getElementById("btn22");
+  var btn23 = document.getElementById("btn23");
+  function setArrival(which) {
+    btn22.setAttribute("aria-pressed", which === "jun22" ? "true" : "false");
+    btn23.setAttribute("aria-pressed", which === "jun23" ? "true" : "false");
+    document.getElementById("planNote").textContent = which === "jun22" ? note22 : note23;
+    renderDays(which === "jun22" ? plan22 : plan23);
+  }
+  btn22.addEventListener("click", function () { setArrival("jun22"); });
+  btn23.addEventListener("click", function () { setArrival("jun23"); });
+  setArrival("jun22");
+  function bindList(listId, progressId, storageKey, items) {
+    var saved = {};
+    try { saved = JSON.parse(localStorage.getItem(storageKey) || "{}") || {}; } catch (e) { saved = {}; }
+    var ul = document.getElementById(listId);
+    var progress = document.getElementById(progressId);
+    function update() {
+      var done = items.filter(function (item, i) { return document.getElementById(storageKey + "-" + i).checked; }).length;
+      progress.textContent = done + " of " + items.length + " checked. Your checks stay on this device.";
+    }
+    items.forEach(function (label, i) {
+      var id = storageKey + "-" + i;
+      var li = document.createElement("li");
+      var input = document.createElement("input");
+      input.type = "checkbox";
+      input.id = id;
+      input.checked = !!saved[id];
+      var lab = document.createElement("label");
+      lab.htmlFor = id;
+      lab.textContent = label;
+      if (input.checked) li.classList.add("done");
+      input.addEventListener("change", function () {
+        li.classList.toggle("done", input.checked);
+        saved[id] = input.checked;
+        try { localStorage.setItem(storageKey, JSON.stringify(saved)); } catch (e) {}
+        update();
+      });
+      li.append(input, lab);
+      ul.appendChild(li);
+    });
+    update();
+  }
+  bindList("packingList", "packProgress", "gt2027-pack", [
+    "Passport, printed and phone copies, and the SAT QR code for entry and exit",
+    "A modest outfit for the Safe Passage visit: long pants or a neat skirt or chinos, a polo or crewneck, closed shoes. This is a school campus, not a beach day",
+    "Broken-in hiking shoes or boots with real grip, not new boots and not sandals, for the volcano",
+    "Rain jacket, backpack rain cover, and a dry bag or two heavy zip bags for electronics and a change of clothes",
+    "Warm layers for Acatenango: fleece, insulated jacket, gloves, warm hat, and something that blocks wind. Operators can loan gear, but your own fitted layers are better",
+    "Quick-dry shirts and shorts, a swimsuit, and a microfiber towel for the lake",
+    "Water shoes if you add Semuc, where the limestone is slick",
+    "Headlamp, sunscreen, sunglasses, and a hat",
+    "Insect repellent with DEET or picaridin, and after-bite cream",
+    "Reusable bottles you can fill with purchased or treated water. OX asks for about 4.5 liters on Acatenango; Tropicana includes 4 liters",
+    "A small first-aid kit, any prescription medicine, and blister care",
+    "A money belt or hidden pouch, a mix of U.S. dollars and quetzales, and a debit card for ATMs inside banks or malls, not street machines",
+    "Phone, offline maps, a power bank, and the right plug adapter (Guatemala uses Type A/B, the same as the U.S.)"
+  ]);
+  bindList("prepList", "prepProgress", "gt2027-prep", [
+    "Email Safe Passage to request the June 30 visit and tour, and to ask about donation method and arrival logistics",
+    "Confirm whether you will be 18 on June 30, 2027, and arrange a chaperone if you will not",
+    "Wait for flight options, then choose a June 22 or June 23 arrival into GUA and a July 1 return",
+    "Check passport validity against both the entry rule and the airline rule",
+    "Book a travel-clinic visit for hepatitis A, typhoid, and the malaria conversation",
+    "Buy travel insurance that includes medical evacuation",
+    "Enroll in STEP and save the Embassy number",
+    "Book the volcano only after flights are set, with a night or two in Antigua first",
+    "Book Antigua, lake, and Guatemala City stays, and reconfirm hostel age rules if needed",
+    "Book shuttles 48 hours ahead, and complete the SAT declaration within 15 days of each flight"
+  ]);
+  document.getElementById("copyEmail").addEventListener("click", function () {
+    var text = "Subject: Visit request for Wednesday, June 30, 2027, and a donation\n\n" + document.getElementById("emailDraft").textContent;
+    var btn = this;
+    function done() { btn.textContent = "Copied"; setTimeout(function () { btn.textContent = "Copy email draft"; }, 1600); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done).catch(function () {});
+    }
+  });
+})();
+</script>
+</body>
+</html>
